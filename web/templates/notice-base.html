@@ -1,0 +1,28 @@
+{% extends "bootstrap/base.html" %}
+
+{% block navbar %}
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle"
+                        data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">首页</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/gxb">工信部</a></li>
+                    <li><a href="/kjb">科技部</a></li>
+                    <li><a href="/fgw">发改委</a></li>
+                    <li><a href="/sxgxt">省工信厅</a></li>
+                    <li><a href="/sxkjt">省科技厅</a></li>
+                    <li><a href="/sxfgw">省发改委</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
