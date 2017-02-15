@@ -22,8 +22,8 @@
         {% if items %}
             <ul class="list-group">
                 {% for item in items %}
-                    <li class="list-group-item"><a href="{{ item['url'] }}"
-                                                   target="_blank">{{ item['title'] }}</a>[{{ item['published_date'] }}]
+                    <li class="list-group-item">
+                        <a href="{{ item['url'] }}" target="_blank">【{{ item['source'] }}】{{ item['title'] }}</a>&nbsp&nbsp&nbsp&nbsp[{{ item['published_time'] }}]
                     </li>
                 {% endfor %}
             </ul>

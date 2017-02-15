@@ -3,8 +3,11 @@ import logging
 
 logging.info("begin to run crawl ...")
 cmdline.execute("scrapy crawl gxb".split())
-# cmdline.execute("scrapy crawl kjb".split())
-# cmdline.execute("scrapy crawl sxgxt".split())
+cmdline.execute("scrapy crawl kjb".split())
+cmdline.execute("scrapy crawl sxgxt".split())
+cmdline.execute("scrapy crawl fgw".split())
+cmdline.execute("scrapy crawl sxfgw".split())
+cmdline.execute("scrapy crawl sxkjt".split())
 logging.info('all finished.')
 
 

@@ -19,7 +19,7 @@ DEPTH_LIMIT = 3
 # USER_AGENT = 'zhengfu (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
@@ -92,4 +92,4 @@ ITEM_PIPELINES = {
 # 抓取内容的筛选关键字
 KEY_WORDS = ['制造', '智能', '申报', '规划', '办法', '工业', '通知']
 # 获取距离今天多少天以内的数据
-MAX_BEFOR_DAYS = 60
+MAX_BEFOR_DAYS = 30

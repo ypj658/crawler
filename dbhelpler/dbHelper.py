@@ -33,9 +33,12 @@ class dbHelper(object):
 
         self.Session = sessionmaker(bind=engine)
 
+        self.urls = self.allUrls()
+
     def save(self, item):
 
-        if (self.isCrawled(item['href'])):
+        # if (self.isCrawled(item['href'])):
+        if (item['href'] not in self.urls):
             n = Notice(title=item["title"],
                        url=item['href'],
                        source=item['source'],
@@ -58,7 +61,9 @@ class dbHelper(object):
     def allUrls(self):
         session = self.Session()
         urls = session.query(Notice.url).all()
-        return urls
+        u = (x[0] for x in urls)
+        print(u)
+        return u
 
     def lately_notice(self, day, source=None):
         session = self.Session()
@@ -76,6 +81,6 @@ class dbHelper(object):
             items.append({"title": row[0],
                           "url": row[1],
                           "source": row[2],
-                          "published_date": row[3]})
+                          "published_time": row[3]})
 
         return items
